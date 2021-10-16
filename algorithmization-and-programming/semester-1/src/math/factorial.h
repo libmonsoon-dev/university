@@ -11,6 +11,7 @@ class FactorialCache {
 public:
     FactorialCache();
     int factorial(int i);
+    int factorial_sum(int n);
 
 private:
     std::vector<int> cache;

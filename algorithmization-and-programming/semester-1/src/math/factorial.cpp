@@ -19,6 +19,16 @@ int FactorialCache::factorial(int i) {
     return this->cache.at(i);
 }
 
+int FactorialCache::factorial_sum(int n) {
+    int sum = this->factorial(n);
+
+    for (int i = 1; i < n; i++) {
+        sum += this->cache.at(i);
+    }
+
+    return sum;
+}
+
 int FactorialCache::calculate_factorial(int i) {
     return i*this->factorial(i-1);
 }
