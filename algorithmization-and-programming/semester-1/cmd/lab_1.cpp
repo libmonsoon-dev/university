@@ -2,9 +2,10 @@
 // Created by daniil_stepanenko on 10.10.2021.
 //
 
-#include "../../lab1/lab1.h"
 #include <stdio.h>
 #include <stdlib.h>
+
+#include "../lab1/lab1.h"
 
 int main() {
     double input;

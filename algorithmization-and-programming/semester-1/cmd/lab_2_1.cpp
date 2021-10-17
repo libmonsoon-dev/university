@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../../lab2/lab2.h"
+#include "../lab2/lab2.h"
 
 int main() {
     double beta, gamma, omega, y;

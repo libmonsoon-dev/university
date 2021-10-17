@@ -7,16 +7,18 @@
 
 #include <vector>
 
+template <typename T>
 class FactorialCache {
 public:
     FactorialCache();
-    int factorial(int i);
-    int factorial_sum(int n);
+    T factorial(int x);
+    T factorial_sum(int n);
 
 private:
-    std::vector<int> cache;
-    int calculate_factorial(int i);
+    std::vector<T> cache;
+    T calculate_factorial(int x);
 };
 
+template class FactorialCache<int>;
 
 #endif //UNIVERSITY_FACTORIAL_H

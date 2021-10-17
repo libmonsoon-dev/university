@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <cmath>
 
-#include "../../lab2/lab2.h"
+#include "../lab2/lab2.h"
 
 int main() {
     double y;
