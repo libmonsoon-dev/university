@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "../lab1/lab1.h"
+#include "../include/lab1.h"
 
 int main() {
     double input;

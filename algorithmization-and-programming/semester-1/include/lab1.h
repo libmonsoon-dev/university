@@ -5,6 +5,6 @@
 #ifndef UNIVERSITY_LAB1_H
 #define UNIVERSITY_LAB1_H
 
-extern double lab1(double);
+double lab1(double);
 
 #endif //UNIVERSITY_LAB1_H

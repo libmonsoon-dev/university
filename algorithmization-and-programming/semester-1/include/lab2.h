@@ -5,8 +5,8 @@
 #ifndef UNIVERSITY_LAB2_H
 #define UNIVERSITY_LAB2_H
 
-extern double lab2_1(double alpha, double beta, double gamma, double omega);
+double lab2_1(double alpha, double beta, double gamma, double omega);
 
-extern double lab2_2(double x);
+double lab2_2(double x);
 
 #endif //UNIVERSITY_LAB2_H

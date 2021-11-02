@@ -4,15 +4,14 @@
 
 #include "cmath"
 
-#include "lab2.h"
+#include "../include/math.h"
+#include "../include/lab2.h"
 
 double lab2_1(double alpha, double beta, double gamma, double omega) {
     return 2 * sin(alpha - beta) + cos(gamma - omega);
 }
 
 double calc_tailor_element(double n, double x);
-
-double abs_double(double x);
 
 double lab2_2(double x) {
     double min_element = pow(10, -6);
@@ -23,7 +22,7 @@ double lab2_2(double x) {
         n++;
 
         sum += element;
-        if (abs_double(element) < min_element) {
+        if (project_abs(element) < min_element) {
             return sum;
         }
     }
@@ -46,11 +45,4 @@ double calc_tailor_element(double n, double x) {
     denominator *= 2*n + 1;
 
     return numerator / denominator;
-}
-
-double abs_double(double x) {
-    if (x < 0) {
-        return -x;
-    }
-    return x;
 }

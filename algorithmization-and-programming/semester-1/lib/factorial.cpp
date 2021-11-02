@@ -2,7 +2,7 @@
 // Created by daniil_stepanenko on 15.10.2021.
 //
 
-#include "factorial.h"
+#include "../include/factorial.h"
 
 template <typename T>
 FactorialCache<T>::FactorialCache() {
