@@ -3,6 +3,7 @@ add_library(
         STATIC
         math.cpp
         factorial.cpp
+        geom.cpp
         matrix.cpp
 )
 
