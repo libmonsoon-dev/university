@@ -8,7 +8,7 @@ add_executable(${LAB2_1_EXE} lab2_1.cpp)
 add_executable(${LAB2_2_EXE} lab2_2.cpp)
 add_executable(${PLAYGROUND_EXE} playground.cpp)
 
-set(PROJECT_LIBS math utils lab)
+set(PROJECT_LIBS lab utils math)
 
 target_link_libraries(${LAB1_EXE} ${PROJECT_LIBS})
 target_link_libraries(${LAB2_1_EXE} ${PROJECT_LIBS})
