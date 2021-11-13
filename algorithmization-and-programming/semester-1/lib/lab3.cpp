@@ -50,6 +50,7 @@ bool lab3_2(int field_size_y, int field_size_x, Point<int> a, Point<int> b) {
     }
 
     if (a.y == b.y || a.x == b.x) {
+        delete field;
         return true;
     }
 
