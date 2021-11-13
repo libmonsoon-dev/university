@@ -10,6 +10,34 @@
 
 template <typename T> inline const char* get_printf_format();
 
+template <typename T>
+int read_array(T* arr, int size) {
+    auto format = get_printf_format<T>();
+
+    for (int i = 0; i < size; i++) {
+        printf("Введите значение элемента с индексом %i\n> ", i);
+        if (scanf(format, &arr[i]) != 1) {
+            printf("Невалидный ввод\n");
+            return EXIT_FAILURE;
+        }
+    }
+
+    return EXIT_SUCCESS;
+}
+
+template <typename T>
+void print_array(T* arr, int size) {
+    auto format = get_printf_format<T>();
+
+    for (int i = 0; i < size; i++) {
+        if (i != 0) {
+            printf(" ");
+        }
+        printf(format, arr[i]);
+    }
+    printf("\n");
+}
+
 template <typename T> int read_matrix(Matrix<T>* matrix) {
     const char* format = get_printf_format<T>();
     T tmp;
@@ -46,6 +74,10 @@ template <typename T> void print_matrix(Matrix<T>* matrix) {
 template<> inline const char* get_printf_format<int>() {
     return "%i";
 }
+
+template int read_array(int* arr, int size);
+
+template void print_array(int* arr, int size);
 
 template int read_matrix(Matrix<int>* matrix);
 
