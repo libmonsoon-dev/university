@@ -35,11 +35,11 @@ inline int Matrix<T>::count_columns() {
 }
 
 template<typename T>
-inline T Matrix<T>::get_element(int x, int y) {
-    return this->data[x][y];
+inline T Matrix<T>::get_element(int y, int x) {
+    return this->data[y][x];
 }
 
 template<typename T>
-inline void Matrix<T>::set_element(int x, int y, T val) {
-     this->data[x][y] = val;
+inline void Matrix<T>::set_element(int y, int x, T val) {
+     this->data[y][x] = val;
 }

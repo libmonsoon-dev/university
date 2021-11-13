@@ -14,8 +14,8 @@ public:
     int count_rows();
     int count_columns();
 
-    T get_element(int x, int y);
-    void set_element(int x, int y, T val);
+    T get_element(int y, int x);
+    void set_element(int y, int x, T val);
 private:
     int rows;
     int columns;
