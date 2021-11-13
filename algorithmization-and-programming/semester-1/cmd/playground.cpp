@@ -2,17 +2,20 @@
 // Created by daniil_stepanenko on 16.10.2021.
 //
 
-#include <stdio.h>
 #include <stdlib.h>
 
-#include "../include/factorial.h"
+#include "../include/matrix.h"
+#include "../include/io_utils.h"
 
 int main() {
-    FactorialCache<int> a;
-    FactorialCache<int> b;
+    const int rows = 2;
+    const int columns = 3;
 
-    printf("%d\n", a.factorial(1) + a.factorial(2) + a.factorial(3) + a.factorial(4) + a.factorial(5));
-    printf("%d\n", b.factorial_sum(5));
+    auto matrix = new Matrix<int>(rows, columns);
 
+    read_matrix(matrix);
+    print_matrix(matrix);
+
+    delete matrix;
     return EXIT_SUCCESS;
 }
