@@ -12,4 +12,4 @@ T project_abs(T x) {
     return x;
 }
 
-template double project_abs<double>(double);
+template double project_abs(double);
