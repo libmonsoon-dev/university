@@ -11,7 +11,7 @@
 #include "../include/array_utils.h"
 #include "../include/lab3.h"
 
-void lab3_1(int* arr, int size) {
+void lab3_1(int arr[], int size) {
     int max_element_index = 0;
     int min_element_index = 0;
 

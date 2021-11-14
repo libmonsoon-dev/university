@@ -7,7 +7,7 @@
 
 #include "geom.h"
 
-void lab3_1(int* arr, int size);
+void lab3_1(int arr[], int size);
 
 bool lab3_2(int field_size_y, int field_size_x, Point<int> a, Point<int> b);
 

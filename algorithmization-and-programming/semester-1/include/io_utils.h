@@ -7,9 +7,9 @@
 
 #include "matrix.h"
 
-template <typename T> int read_array(T* arr, int size);
+template <typename T> int read_array(T arr[], int size);
 
-template <typename T> void print_array(T* arr, int size);
+template <typename T> void print_array(T arr[], int size);
 
 template <typename T> int read_matrix(Matrix<T>* matrix);
 

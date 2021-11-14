@@ -11,7 +11,7 @@
 template <typename T> inline const char* get_printf_format();
 
 template <typename T>
-int read_array(T* arr, int size) {
+int read_array(T arr[], int size) {
     auto format = get_printf_format<T>();
 
     for (int i = 0; i < size; i++) {
@@ -26,7 +26,7 @@ int read_array(T* arr, int size) {
 }
 
 template <typename T>
-void print_array(T* arr, int size) {
+void print_array(T arr[], int size) {
     auto format = get_printf_format<T>();
 
     for (int i = 0; i < size; i++) {
@@ -75,9 +75,9 @@ template<> inline const char* get_printf_format<int>() {
     return "%i";
 }
 
-template int read_array(int* arr, int size);
+template int read_array(int arr[], int size);
 
-template void print_array(int* arr, int size);
+template void print_array(int arr[], int size);
 
 template int read_matrix(Matrix<int>* matrix);
 
