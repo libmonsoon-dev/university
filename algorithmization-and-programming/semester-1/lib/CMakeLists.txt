@@ -1,4 +1,10 @@
 add_library(
+        time
+        STATIC
+        time.cpp
+)
+
+add_library(
         math
         STATIC
         math.cpp
@@ -20,4 +26,5 @@ add_library(
         lab1.cpp
         lab2.cpp
         lab3.cpp
+        lab4.cpp
 )
