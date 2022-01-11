@@ -18,6 +18,8 @@ add_library(
         STATIC
         io_utils.cpp
         array_utils.cpp
+        number_utils.cpp
+        sort.cpp
 )
 
 add_library(
@@ -27,4 +29,5 @@ add_library(
         lab2.cpp
         lab3.cpp
         lab4.cpp
+        lab5.cpp
 )
