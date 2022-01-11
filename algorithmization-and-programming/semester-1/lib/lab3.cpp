@@ -3,8 +3,8 @@
 //
 
 #include <cmath>
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 
 #include "../include/geom.h"
 #include "../include/matrix.h"
@@ -29,7 +29,7 @@ void lab3_1(int arr[], int size) {
     delete_array_element(arr, size, fmin(max_element_index, min_element_index));
 }
 
-inline bool check_direction(Matrix<bool>* field, Point<int> point, int dy, int dx) {
+inline bool check_direction(Matrix<bool> *field, Point<int> point, int dy, int dx) {
     while (field->is_include(point)) {
         if (field->get_element(point)) {
             return true;
@@ -57,9 +57,9 @@ bool lab3_2(int field_size_y, int field_size_x, Point<int> a, Point<int> b) {
     field->set_element(a.y, a.x, true);
 
     auto result = check_direction(field, b, 1, 1)
-    || check_direction(field, b, 1, -1)
-    || check_direction(field, b, -1, 1)
-    || check_direction(field, b, -1, -1);
+                  || check_direction(field, b, 1, -1)
+                  || check_direction(field, b, -1, 1)
+                  || check_direction(field, b, -1, -1);
 
     delete field;
     return result;

@@ -2,8 +2,8 @@
 // Created by daniil_stepanenko on 10.10.2021.
 //
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 
 #include "../include/lab1.h"
 

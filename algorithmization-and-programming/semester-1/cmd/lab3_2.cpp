@@ -2,8 +2,8 @@
 // Created by daniil_stepanenko on 13.11.2021.
 //
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 
 #include "../include/geom.h"
 #include "../include/lab3.h"

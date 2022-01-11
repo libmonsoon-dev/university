@@ -2,8 +2,8 @@
 // Created by daniil_stepanenko on 14.11.2021.
 //
 
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 
 #include "../include/time.h"
 #include "../include/lab4.h"

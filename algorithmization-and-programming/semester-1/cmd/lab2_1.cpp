@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdio>
+#include <cstdlib>
 
 #include "../include/lab2.h"
 
@@ -24,7 +24,7 @@ int main() {
         return EXIT_FAILURE;
     }
 
-    for (double alpha = 0; alpha <= 1; alpha+= 0.2) {
+    for (double alpha = 0; alpha <= 1; alpha += 0.2) {
         y = lab2_1(alpha, beta, gamma, omega);
         printf("f(%lf) = %lf\n", alpha, y);
     }

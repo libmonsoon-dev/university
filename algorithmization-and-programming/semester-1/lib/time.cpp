@@ -2,19 +2,19 @@
 // Created by daniil_stepanenko on 14.11.2021.
 //
 
-#include <stdio.h>
+#include <cstdio>
 
 #include "../include/time.h"
 
 #define SECONDS_IN_MINUTE 60
 #define MINUTES_IN_HOUR 60
 
-void normalize(int* h, int* l, int base) {
+void normalize(int *h, int *l, int base) {
     int hi = *h;
     int lo = *l;
 
     if (lo < 0) {
-        int n = (-lo-1)/base + 1;
+        int n = (-lo - 1) / base + 1;
         hi -= n;
         lo += n * base;
     }
@@ -29,7 +29,7 @@ void normalize(int* h, int* l, int base) {
     *l = lo;
 }
 
-void div(int* hi, int* lo, int divider, int base) {
+void div(int *hi, int *lo, int divider, int base) {
     *lo += *hi % divider * base;
     *hi /= divider;
 }

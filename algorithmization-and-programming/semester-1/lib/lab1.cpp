@@ -3,6 +3,7 @@
 //
 
 #include "cmath"
+
 #include "../include/lab1.h"
 
 double lab1(double x) {
