@@ -17,6 +17,10 @@ class Queue {
 public:
     Queue();
 
+    Queue(Queue &other);
+
+    Queue(Queue &&other);
+
     Queue operator<<(T item);
 
     Queue operator>>(T *output);

@@ -12,6 +12,18 @@ Queue<T>::Queue() {
 }
 
 template<typename T>
+Queue<T>::Queue(Queue &other) {
+    this->first = other.first;
+    this->last = other.last;
+}
+
+template<typename T>
+Queue<T>::Queue(Queue &&other) {
+    this->first = other.first;
+    this->last = other.last;
+};
+
+template<typename T>
 Queue<T> Queue<T>::operator<<(T value) {
     auto next = new QueueItem<T>(this->last, value);
 
@@ -100,7 +112,7 @@ bool Queue<T>::operator==(Queue<T> other) {
 template<typename T>
 bool Queue<T>::operator!=(Queue<T> other) {
     return !this->operator==(other);
-};
+}
 
 template<typename T>
 QueueItem<T>::QueueItem(QueueItem *prev, T value) {
