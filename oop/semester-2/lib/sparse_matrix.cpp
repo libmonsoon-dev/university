@@ -3,6 +3,10 @@
 #include "../include/sparse_matrix.h"
 
 SparseMatrix::SparseMatrix(int rows, int columns) {
+    if (rows < 1 || columns < 1) {
+        throw "Размерность стороны должна быть 1 и более";
+    }
+
     this->rows = rows;
     this->columns = columns;
 
