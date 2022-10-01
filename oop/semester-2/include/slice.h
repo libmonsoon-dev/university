@@ -3,26 +3,22 @@
 
 #include "point.h"
 
-template<typename T>
 class Slice {
 public:
     Slice();
 
-    void Append(T val);
+    void Append(Point val);
 
     void Remove(int index);
 
     int Length();
 
-    T *Array();
+    Point *Array();
 
 private:
-    T *data;
+    Point *data;
     int len;
     int cap;
 };
-
-template
-class Slice<Point<int>>;
 
 #endif //UNIVERSITY_SLICE_H

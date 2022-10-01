@@ -5,27 +5,23 @@
 
 #define EMPTY_QUEUE_ERROR "Попытка чтения из пустой очереди"
 
-template<typename T>
-Queue<T>::Queue() {
+Queue::Queue() {
     this->first = nullptr;
     this->last = nullptr;
 }
 
-template<typename T>
-Queue<T>::Queue(Queue &other) {
+Queue::Queue(Queue &other) {
     this->first = other.first;
     this->last = other.last;
 }
 
-template<typename T>
-Queue<T>::Queue(Queue &&other) {
+Queue::Queue(Queue &&other) {
     this->first = other.first;
     this->last = other.last;
 };
 
-template<typename T>
-Queue<T> Queue<T>::operator<<(T value) {
-    auto next = new QueueItem<T>(this->last, value);
+Queue Queue::operator<<(int value) {
+    auto next = new QueueItem(this->last, value);
 
     if (this->last != nullptr) {
         this->last->next = next;
@@ -40,8 +36,7 @@ Queue<T> Queue<T>::operator<<(T value) {
     return *this;
 }
 
-template<typename T>
-Queue<T> Queue<T>::operator>(T *output) {
+Queue Queue::operator>(int *output) {
     if (this->first == nullptr) {
         throw EMPTY_QUEUE_ERROR;
     }
@@ -50,8 +45,7 @@ Queue<T> Queue<T>::operator>(T *output) {
     return *this;
 }
 
-template<typename T>
-Queue<T> Queue<T>::operator>>(T *output) {
+Queue Queue::operator>>(int *output) {
     if (this->first == nullptr) {
         throw EMPTY_QUEUE_ERROR;
     }
@@ -64,7 +58,7 @@ Queue<T> Queue<T>::operator>>(T *output) {
     return *this;
 }
 
-std::ostream &operator<<(std::ostream &out, Queue<int> q) {
+std::ostream &operator<<(std::ostream &out, Queue q) {
     out << "Queue(";
     for (auto item = q.first; item != nullptr; item = item->next) {
         out << item->value;
@@ -78,7 +72,7 @@ std::ostream &operator<<(std::ostream &out, Queue<int> q) {
     return out;
 };
 
-std::istream &operator>>(std::istream &in, Queue<int> &q) {
+std::istream &operator>>(std::istream &in, Queue &q) {
     int val;
     in >> val;
     q << val;
@@ -86,8 +80,7 @@ std::istream &operator>>(std::istream &in, Queue<int> &q) {
     return in;
 }
 
-template<typename T>
-bool Queue<T>::operator==(Queue<T> other) {
+bool Queue::operator==(Queue other) {
     auto a = this->first;
     auto b = other.first;
 
@@ -109,13 +102,11 @@ bool Queue<T>::operator==(Queue<T> other) {
     }
 }
 
-template<typename T>
-bool Queue<T>::operator!=(Queue<T> other) {
+bool Queue::operator!=(Queue other) {
     return !this->operator==(other);
 }
 
-template<typename T>
-QueueItem<T>::QueueItem(QueueItem *prev, T value) {
+QueueItem::QueueItem(QueueItem *prev, int value) {
     this->next = nullptr;
     this->prev = prev;
     this->value = value;

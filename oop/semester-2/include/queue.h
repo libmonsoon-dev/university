@@ -1,18 +1,15 @@
 #ifndef UNIVERSITY_QUEUE_H
 #define UNIVERSITY_QUEUE_H
 
-template<typename T>
 class QueueItem {
 public:
     QueueItem *next;
     QueueItem *prev;
-    T value;
+    int value;
 
-    QueueItem<T>(QueueItem *prev, T value);
+    QueueItem(QueueItem *prev, int value);
 };
 
-
-template<typename T>
 class Queue {
 public:
     Queue();
@@ -21,26 +18,23 @@ public:
 
     Queue(Queue &&other);
 
-    Queue operator<<(T item);
+    Queue operator<<(int item);
 
-    Queue operator>>(T *output);
+    Queue operator>>(int *output);
 
-    Queue operator>(T *output);
+    Queue operator>(int *output);
 
-    bool operator==(Queue<T> other);
+    bool operator==(Queue other);
 
-    bool operator!=(Queue<T> other);
+    bool operator!=(Queue other);
 
-    friend std::ostream &operator<<(std::ostream &out, Queue<int> q);
+    friend std::ostream &operator<<(std::ostream &out, Queue q);
 
-    friend std::istream &operator>>(std::istream &out, Queue<int> &q);
+    friend std::istream &operator>>(std::istream &out, Queue &q);
 
 private:
-    QueueItem<T> *first;
-    QueueItem<T> *last;
+    QueueItem *first;
+    QueueItem *last;
 };
-
-template
-class Queue<int>;
 
 #endif //UNIVERSITY_QUEUE_H

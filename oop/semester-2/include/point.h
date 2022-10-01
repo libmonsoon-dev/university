@@ -1,25 +1,22 @@
 #ifndef UNIVERSITY_POINT_H
 #define UNIVERSITY_POINT_H
 
-template<typename T>
+
 class Point {
 public:
     Point();
 
-    Point(int x, int y, T value);
+    Point(int x, int y, int value);
 
-    Point<T> multiply(T multiplier);
+    Point multiply(int multiplier);
 
     Point transpose();
 
     int x;
     int y;
-    T value;
+    int value;
 };
 
-template
-class Point<int>;
-
-Point<int> scan_point();
+Point scan_point();
 
 #endif //UNIVERSITY_POINT_H

@@ -6,7 +6,7 @@
 
 int main() {
     try {
-        auto q = Queue<int>();
+        auto q = Queue();
         printf("Введите первый элемент очереди\n> ");
         std::cin >> q;
         std::cout << q;

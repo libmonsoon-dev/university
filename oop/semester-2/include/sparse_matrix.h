@@ -4,7 +4,6 @@
 #include "point.h"
 #include "slice.h"
 
-template<typename T>
 class SparseMatrix {
 public:
     SparseMatrix();
@@ -15,33 +14,30 @@ public:
 
     SparseMatrix(SparseMatrix &&other);
 
-    void set(Point<T> point);
+    void set(Point point);
 
     void Print();
 
-    SparseMatrix<T> Multiply(int multiplier);
+    SparseMatrix Multiply(int multiplier);
 
-    SparseMatrix<T> Multiply(SparseMatrix<T>);
+    SparseMatrix Multiply(SparseMatrix);
 
-    SparseMatrix<T> Add(SparseMatrix<T>);
+    SparseMatrix Add(SparseMatrix);
 
-    SparseMatrix<T> Transpose();
+    SparseMatrix Transpose();
 
-    bool Equal(SparseMatrix<T>);
+    bool Equal(SparseMatrix);
 
-    T At(int x, int y);
+    int At(int x, int y);
 
 private:
     int rows;
     int columns;
-    Slice<Point<T>> *points;
+    Slice *points;
 
     int IndexOf(int x, int y);
 };
 
-SparseMatrix<int> scan_sparse_matrix();
-
-template
-class SparseMatrix<int>;
+SparseMatrix scan_sparse_matrix();
 
 #endif //UNIVERSITY_SPARSE_MATRIX_H
