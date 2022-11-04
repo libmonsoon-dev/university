@@ -10,7 +10,7 @@ public:
 
     Decimal(int value, int exp = 0);
 
-    v(double value, int roundToDigits = 2);
+    Decimal(double value, int roundToDigits = 2);
 
     bool operator==(const Decimal other) const;
 
