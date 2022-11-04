@@ -5,4 +5,9 @@ add_library(
         slice.cpp
         sparse_matrix.cpp
         queue.cpp
+        deposits_list.cpp
+        base_deposit.cpp
+        daily_capitalize_deposit.cpp
+        monthly_capitalize_deposit.cpp
+        quarterly_capitalize_deposit.cpp
 )
